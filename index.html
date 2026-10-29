@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Instahab helps you save media you own or have permission to download.">
+  <meta name="theme-color" content="#111827">
+  <title>Instahab — Media Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Instahab home">
+      <span class="brand-icon" aria-hidden="true">↓</span>
+      <span>instahab</span>
+    </a>
+    <span class="top-note">Simple · Free · Permission-first</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> YOUR MEDIA, YOUR CHOICE</div>
+      <h1>Save your media.<br><span>Keep it simple.</span></h1>
+      <p class="intro">Paste a direct media-file link you own or have permission to save. Instahab will check the link and offer a download when the file is accessible.</p>
+
+      <form id="download-form" class="link-form">
+        <label class="sr-only" for="media-url">Direct media file URL</label>
+        <input id="media-url" name="media-url" type="url" inputmode="url"
+          placeholder="Paste a direct image or video URL…" autocomplete="url" required>
+        <button id="check-button" type="submit"><span>Check link</span><span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="hint">Use a direct public file link (for example, a .jpg, .png, .mp4, or .webp file).</p>
+
+      <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+      <div id="preview-card" class="preview-card" hidden>
+        <div class="preview-head">
+          <div>
+            <span class="mini-label">LINK CHECK</span>
+            <h2 id="preview-title">Media link</h2>
+          </div>
+          <span id="file-type" class="file-type">MEDIA</span>
+        </div>
+        <div id="media-preview" class="media-preview"></div>
+        <p id="file-url" class="file-url"></p>
+        <a id="download-link" class="download-link" href="#" download target="_blank" rel="noopener noreferrer">Open / download file <span aria-hidden="true">↓</span></a>
+        <p class="small-note">The file host controls whether the file can be previewed or downloaded. If the link is blocked, use the original site's own download/export option.</p>
+      </div>
+    </section>
+
+    <section class="features" aria-label="How it works">
+      <article class="feature">
+        <span class="feature-icon">01</span>
+        <h3>Paste a direct link</h3>
+        <p>Use a direct URL to an image or video file, not a private post or login-only page.</p>
+      </article>
+      <article class="feature">
+        <span class="feature-icon">02</span>
+        <h3>Check the link</h3>
+        <p>Instahab checks the URL format and attempts a safe preview when the host allows it.</p>
+      </article>
+      <article class="feature">
+        <span class="feature-icon">03</span>
+        <h3>Save with permission</h3>
+        <p>Only save media you created or have clear permission to download and use.</p>
+      </article>
+    </section>
+
+    <section class="notice">
+      <span class="notice-icon" aria-hidden="true">ⓘ</span>
+      <div>
+        <h2>Privacy and permissions</h2>
+        <p>Instahab does not ask for your Instagram password, access private accounts, or bypass platform restrictions. This starter website does not extract media from Instagram post, Reel, or Story page URLs. For Instagram content, use Instagram's official download/export features or an authorized API when available.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-icon" aria-hidden="true">↓</span><span>instahab</span></a>
+    <span>Save responsibly. Respect creators.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
